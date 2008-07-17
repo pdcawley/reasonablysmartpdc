@@ -1,8 +1,4 @@
 function main() {
-  return [
-    200,
-    "Ok",
-    ["Content-Type", "text/html"],
-    "<html><head><title>Hello World</title></head><body>Hello World</body></html>"
-  ];
+  var file = system.filesystem.get('index.html');
+  return [ 200, "Ok", ["Content-Type", "text/html" ], file ];
 }
