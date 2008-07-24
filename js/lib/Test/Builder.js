@@ -627,7 +627,9 @@ Test.Builder.prototype._setupOutput = function () {
         system.console.log(msg);
         that.buffer = that.buffer + msg;
       };
-      this.buffer = '';
+      this.buffer = this.buffer
+        ? this.buffer + "\n\n"
+        : '';
 
       this.output(writer);
       this.failureOutput(writer);
